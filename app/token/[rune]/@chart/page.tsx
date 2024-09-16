@@ -2,6 +2,12 @@
 
 import React, { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    TradingView: any
+  }
+}
+
 const TradingViewWidget = ({ type = 'BTC' }: { type: string }) => {
   useEffect(() => {
     const symbolType = type?.substring(0, 3) + 'USD';

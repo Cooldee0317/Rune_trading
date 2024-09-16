@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  @apply bg-ord-dark-blue text-white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+  @apply focus:outline-none active:outline-none focus:ring-0 active:ring-0;
+}
+
+h1 {
+  @apply text-xl font-bold lg:text-2xl;
+}
+
+h3 {
+  @apply font-extralight text-sm lg:text-base;
+}
+
+.container {
+  @apply max-w-[90.25rem] mx-auto;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ord-dark-blue;
+}
+
+.default-layout ::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ord-blue/20 transition-colors duration-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ord-blue;
+}
